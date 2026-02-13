@@ -6,6 +6,12 @@ const loveYouToo = document.getElementById("loveYouToo");
 const sad = document.getElementById("sad");
 
 const answers = ["nico", "nicolas", "nicosmos", "nicolas dijoud", "dijoud", "nicolasdijoud", "nicodijoud"];
+
+;
+const today = new Date();
+
+if ( today.getDate() == 14){
+
 button.addEventListener('click', () => {
     let value = input.value.trim().toLowerCase();
     console.log(value);
@@ -27,13 +33,7 @@ function processLove() {
     setTimeout( ()=>{
         loveYouToo.style.display = "block";
         manchot.style.display = "none";
-        setTimeout( () =>{
-            loveYouToo.style.display = "none";
-            card.style.display = "flex";
-            b.classList.remove("ballonVisible");
-        },6000)
     }, 4000);
-    
 
 }
 
@@ -45,4 +45,12 @@ function processSadness() {
         sad.style.display = "none";
     }, 5000)
 
+}
+
+}
+else{
+    document.body.innerHTML = `
+    <p>
+    Ce n'est pas encore le 14/02
+    </p>`;
 }
