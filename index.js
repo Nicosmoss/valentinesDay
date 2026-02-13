@@ -27,7 +27,13 @@ function processLove() {
     setTimeout( ()=>{
         loveYouToo.style.display = "block";
         manchot.style.display = "none";
+        setTimeout( () =>{
+            loveYouToo.style.display = "none";
+            card.style.display = "flex";
+            b.classList.remove("ballonVisible");
+        },6000)
     }, 4000);
+    
 
 }
 
